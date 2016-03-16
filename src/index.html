@@ -31,15 +31,57 @@
   <script src="vendor/angular2/bundles/angular2.dev.js"></script>
   <script src="vendor/angular2/bundles/http.dev.js"></script>
   <script src="vendor/angular2/bundles/router.dev.js"></script>
+  <link href="app.css" rel="stylesheet">
 
   <script src="thirdparty/libs.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script>
     System.config({
       packages: {
         app: {
           format: 'register',
           defaultExtension: 'js'
-        }
+        },
+        '@angular2-material/core': {
+          format: 'cjs',
+          defaultExtension: 'js',
+          main: 'core.js'
+        },
+        '@angular2-material/sidenav': {
+          format: 'cjs',
+          defaultExtension: 'js',
+          main: 'sidenav.js'
+        },
+        '@angular2-material/toolbar': {
+          format: 'cjs',
+          defaultExtension: 'js',
+          main: 'toolbar.js'
+        },
+        '@angular2-material/card': {
+          format: 'cjs',
+          defaultExtension: 'js',
+          main: 'card.js'
+        },
+        '@angular2-material/button': {
+          format: 'cjs',
+          defaultExtension: 'js',
+          main: 'button.js'
+        },
+        '@angular2-material/checkbox': {
+          format: 'cjs',
+          defaultExtension: 'js',
+          main: 'checkbox.js'
+        },
+        '@angular2-material/radio': {
+          format: 'cjs',
+          defaultExtension: 'js',
+          main: 'radio.js'
+        },
+        '@angular2-material/progress-circle': {
+          format: 'cjs',
+          defaultExtension: 'js',
+          main: 'progress-circle.js'
+        },
       }
     });
     System.import('app.js').then(null, console.error.bind(console));
