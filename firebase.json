@@ -1,0 +1,18 @@
+{
+  "firebase": "material2-app",
+  "public": ".",
+  "ignore": [
+    "firebase.json"
+  ],
+  "headers": [
+    {
+      "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ]
+}
