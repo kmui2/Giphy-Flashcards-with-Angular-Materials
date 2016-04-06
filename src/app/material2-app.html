@@ -35,6 +35,38 @@
       <md-radio-button name="symbol" disabled>Gamma</md-radio-button>
     </md-card>
 
+    <md-card class="app-input-section">
+      <md-input placeholder="First name"></md-input>
+
+      <md-input #nickname placeholder="Nickname" maxlength="50">
+        <md-hint align="end">
+          {{nickname.characterCount}} / 50
+        </md-hint>
+      </md-input>
+
+      <md-input>
+        <md-placeholder>
+          <i class="material-icons app-input-icon">android</i> Favorite phone
+        </md-placeholder>
+      </md-input>
+
+      <md-input placeholder="Motorcycle model">
+        <span md-prefix>
+          <i class="material-icons app-input-icon">motorcycle</i>
+          &nbsp;
+        </span>
+      </md-input>
+    </md-card>
+
+    <md-card>
+      <md-list class="app-list">
+        <md-list-item *ngFor="#food of foods">
+          <h3 md-line>{{food.name}}</h3>
+          <p md-line class="demo-secondary-text">{{food.rating}}</p>
+        </md-list-item>
+      </md-list>
+    </md-card>
+
     <md-card>
       <md-spinner class="app-spinner"></md-spinner>
       <md-spinner color="accent" class="app-spinner"></md-spinner>

@@ -7,6 +7,8 @@ import {MdRadioButton} from '@angular2-material/radio';
 import {MdRadioDispatcher} from '@angular2-material/radio/radio_dispatcher';
 import {MdSpinner} from '@angular2-material/progress-circle';
 import {MD_CARD_DIRECTIVES} from '@angular2-material/card';
+import {MD_INPUT_DIRECTIVES} from '@angular2-material/input';
+import {MD_LIST_DIRECTIVES} from '@angular2-material/list';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 
 
@@ -24,6 +26,8 @@ import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
     MdCheckbox,
     MdRadioButton,
     MdSpinner,
+    MD_INPUT_DIRECTIVES,
+    MD_LIST_DIRECTIVES,
   ],
   pipes: []
 })
@@ -31,5 +35,9 @@ import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 
 ])
 export class Material2AppApp {
-
+  foods: any[] = [
+    {name: 'Pizza', rating: 'Excellent'},
+    {name: 'Burritos', rating: 'Great'},
+    {name: 'French fries', rating: 'Pretty good'},
+  ];
 }
