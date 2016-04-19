@@ -1,6 +1,6 @@
 {
   "firebase": "material2-app",
-  "public": ".",
+  "public": "dist",
   "ignore": [
     "firebase.json"
   ],
@@ -14,5 +14,9 @@
         }
       ]
     }
-  ]
+  ],
+  "rewrites": [{
+    "source": "/**/!(*.@(js|ts|html|css|json|svg|png|jpg|jpeg))",
+    "destination": "/index.html"
+  }]
 }
