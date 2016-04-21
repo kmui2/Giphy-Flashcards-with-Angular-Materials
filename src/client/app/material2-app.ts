@@ -6,6 +6,7 @@ import {MdCheckbox} from '@angular2-material/checkbox';
 import {MdRadioButton} from '@angular2-material/radio';
 import {MdRadioDispatcher} from '@angular2-material/radio/radio_dispatcher';
 import {MdSpinner} from '@angular2-material/progress-circle';
+import {MdProgressBar} from '@angular2-material/progress-bar';
 import {MD_CARD_DIRECTIVES} from '@angular2-material/card';
 import {MD_INPUT_DIRECTIVES} from '@angular2-material/input';
 import {MD_LIST_DIRECTIVES} from '@angular2-material/list';
@@ -28,6 +29,7 @@ import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
     MdSpinner,
     MD_INPUT_DIRECTIVES,
     MD_LIST_DIRECTIVES,
+    MdProgressBar,
   ],
   pipes: []
 })
@@ -40,4 +42,14 @@ export class Material2AppApp {
     {name: 'Burritos', rating: 'Great'},
     {name: 'French fries', rating: 'Pretty good'},
   ];
+
+  progress: number = 0;
+  
+  constructor() {
+
+    // Update the value for the progress-bar on an interval.
+    setInterval(() => {
+      this.progress = (this.progress + Math.floor(Math.random() * 4) + 1) % 100;
+    }, 200);
+  }
 }
