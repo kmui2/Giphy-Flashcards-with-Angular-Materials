@@ -9,6 +9,6 @@ describe('material2-app App', function() {
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('material2-app Works!');
+    expect(page.getParagraphText()).toEqual('material2-app works!');
   });
 });

@@ -4,6 +4,6 @@ export class Material2AppPage {
   }
 
   getParagraphText() {
-    return element(by.css('material2-app-app p')).getText();
+    return element(by.css('material2-app-app h1')).getText();
   }
 }

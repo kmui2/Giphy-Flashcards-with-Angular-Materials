@@ -1,20 +1,18 @@
 /* global require, module */
 
-const Angular2App = require('angular-cli/lib/broccoli/angular2-app');
-const mergeTrees = require('broccoli-merge-trees');
-const BroccoliFunnel = require('broccoli-funnel');
+var Angular2App = require('angular-cli/lib/broccoli/angular2-app');
 
 module.exports = function(defaults) {
-  var app = new Angular2App(defaults, {
-    vendorNpmFiles: []
+  return new Angular2App(defaults, {
+    vendorNpmFiles: [
+      'systemjs/dist/system-polyfills.js',
+      'systemjs/dist/system.src.js',
+      'zone.js/dist/*.js',
+      'es6-shim/es6-shim.js',
+      'reflect-metadata/*.js',
+      'rxjs/**/*.js',
+      '@angular/**/*.js',
+      '@angular2-material/**/*'
+    ]
   });
-
-  var materialTree = BroccoliFunnel('node_modules/@angular2-material', {
-    destDir: '@angular2-material'
-  });
-
-  return mergeTrees([
-    app.toTree(),
-    materialTree,
-  ]);
 };
