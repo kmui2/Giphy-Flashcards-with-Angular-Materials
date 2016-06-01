@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 import {MD_SIDENAV_DIRECTIVES} from '@angular2-material/sidenav';
-import {MdToolbar} from '@angular2-material/toolbar';
-import {MdButton} from '@angular2-material/button';
-import {MdCheckbox} from '@angular2-material/checkbox';
-import {MdRadioButton} from '@angular2-material/radio';
-import {MdRadioDispatcher} from '@angular2-material/radio/radio_dispatcher';
-import {MdSpinner} from '@angular2-material/progress-circle';
-import {MdProgressBar} from '@angular2-material/progress-bar';
+import {MD_TOOLBAR_DIRECTIVES} from '@angular2-material/toolbar';
+import {MD_BUTTON_DIRECTIVES} from '@angular2-material/button';
+import {MD_CHECKBOX_DIRECTIVES} from '@angular2-material/checkbox';
+import {MD_RADIO_DIRECTIVES, MdRadioDispatcher} from '@angular2-material/radio';
+import {MD_PROGRESS_CIRCLE_DIRECTIVES} from '@angular2-material/progress-circle';
+import {MD_PROGRESS_BAR_DIRECTIVES} from '@angular2-material/progress-bar';
 import {MD_CARD_DIRECTIVES} from '@angular2-material/card';
 import {MD_INPUT_DIRECTIVES} from '@angular2-material/input';
 import {MD_LIST_DIRECTIVES} from '@angular2-material/list';
-import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
+import {MD_ICON_DIRECTIVES, MdIconRegistry} from '@angular2-material/icon';
+import {MD_TABS_DIRECTIVES} from '@angular2-material/tabs';
 
 @Component({
   moduleId: module.id,
@@ -21,15 +21,16 @@ import {MdIcon, MdIconRegistry} from '@angular2-material/icon';
   directives: [
     MD_SIDENAV_DIRECTIVES,
     MD_CARD_DIRECTIVES,
-    MdToolbar,
-    MdButton,
-    MdCheckbox,
-    MdRadioButton,
-    MdSpinner,
+    MD_TOOLBAR_DIRECTIVES,
+    MD_BUTTON_DIRECTIVES,
+    MD_CHECKBOX_DIRECTIVES,
+    MD_RADIO_DIRECTIVES,
+    MD_PROGRESS_CIRCLE_DIRECTIVES,
     MD_INPUT_DIRECTIVES,
     MD_LIST_DIRECTIVES,
-    MdProgressBar,
-    MdIcon,
+    MD_PROGRESS_BAR_DIRECTIVES,
+    MD_ICON_DIRECTIVES,
+    MD_TABS_DIRECTIVES,
   ],
 })
 export class Material2AppAppComponent {

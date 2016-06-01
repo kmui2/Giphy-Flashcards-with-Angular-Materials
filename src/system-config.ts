@@ -68,6 +68,11 @@ const packages: any = {
     defaultExtension: 'js',
     main: 'icon.js'
   },
+  '@angular2-material/tabs': {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: 'tabs.js'
+  },
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
