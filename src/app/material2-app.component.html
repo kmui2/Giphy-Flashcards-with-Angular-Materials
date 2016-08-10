@@ -17,7 +17,7 @@
 
     <md-card>
       <button md-button>FLAT</button>
-      <button md-raised-button>RAISED</button>
+      <button md-raised-button md-tooltip="This is a tooltip!">RAISED</button>
       <button md-raised-button color="primary">PRIMARY RAISED</button>
       <button md-raised-button color="accent">ACCENT RAISED</button>
     </md-card>
@@ -67,30 +67,30 @@
       </md-list>
     </md-card>
 
-    <md-card>
-      <md-spinner class="app-spinner"></md-spinner>
-      <md-spinner color="accent" class="app-spinner"></md-spinner>
-    </md-card>
+    <!--<md-card>-->
+      <!--<md-spinner class="app-spinner"></md-spinner>-->
+      <!--<md-spinner color="accent" class="app-spinner"></md-spinner>-->
+    <!--</md-card>-->
 
-    <md-card>
-      <label>
-        Indeterminate progress-bar
-        <md-progress-bar
-            class="app-progress"
-            mode="indeterminate"
-            aria-label="Indeterminate progress-bar example"></md-progress-bar>
-      </label>
+    <!--<md-card>-->
+      <!--<label>-->
+        <!--Indeterminate progress-bar-->
+        <!--<md-progress-bar-->
+            <!--class="app-progress"-->
+            <!--mode="indeterminate"-->
+            <!--aria-label="Indeterminate progress-bar example"></md-progress-bar>-->
+      <!--</label>-->
 
-      <label>
-        Determinate progress bar - {{progress}}%
-        <md-progress-bar
-            class="app-progress"
-            color="accent"
-            mode="determinate"
-            [value]="progress"
-            aria-label="Determinate progress-bar example"></md-progress-bar>
-      </label>
-    </md-card>
+      <!--<label>-->
+        <!--Determinate progress bar - {{progress}}%-->
+        <!--<md-progress-bar-->
+            <!--class="app-progress"-->
+            <!--color="accent"-->
+            <!--mode="determinate"-->
+            <!--[value]="progress"-->
+            <!--aria-label="Determinate progress-bar example"></md-progress-bar>-->
+      <!--</label>-->
+    <!--</md-card>-->
 
     <md-card>
       <md-tab-group>
