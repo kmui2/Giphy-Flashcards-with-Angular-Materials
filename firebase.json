@@ -1,22 +1,25 @@
 {
-  "firebase": "material2-app",
-  "public": "dist",
-  "ignore": [
-    "firebase.json"
-  ],
-  "headers": [
-    {
-      "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
-      "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        }
-      ]
-    }
-  ],
-  "rewrites": [{
-    "source": "/**/!(*.@(js|ts|html|css|json|svg|png|jpg|jpeg))",
-    "destination": "/index.html"
-  }]
+  "hosting": {
+    "public": "dist",
+    "rewrites": [
+      {
+        "source": "/**/!(*.@(js|ts|html|css|json|svg|png|jpg|jpeg))",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
+      }
+    ],
+    "ignore": [
+      "firebase.json"
+    ]
+  }
 }
