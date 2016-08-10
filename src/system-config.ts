@@ -6,74 +6,37 @@ const map: any = {
   '@angular2-material': 'vendor/@angular2-material',
 };
 
-/** User packages configuration. */
-const packages: any = {
-  '@angular2-material/core': {
+const materialComponents = [
+  'button',
+  'card',
+  'core',
+  'checkbox',
+  'grid-list',
+  'icon',
+  'input',
+  'list',
+  'menu',
+  'progress-bar',
+  'progress-circle',
+  'radio',
+  'sidenav',
+  'slider',
+  'slide-toggle',
+  'button-toggle',
+  'tabs',
+  'toolbar',
+  'tooltip',
+];
+
+
+let packages = {};
+materialComponents.forEach(name => {
+  packages[`@angular2-material/${name}`] = {
     format: 'cjs',
     defaultExtension: 'js',
-    main: 'core.js'
-  },
-  '@angular2-material/sidenav': {
-    format: 'cjs',
-    defaultExtension: 'js',
-    main: 'sidenav.js'
-  },
-  '@angular2-material/toolbar': {
-    format: 'cjs',
-    defaultExtension: 'js',
-    main: 'toolbar.js'
-  },
-  '@angular2-material/card': {
-    format: 'cjs',
-    defaultExtension: 'js',
-    main: 'card.js'
-  },
-  '@angular2-material/button': {
-    format: 'cjs',
-    defaultExtension: 'js',
-    main: 'button.js'
-  },
-  '@angular2-material/checkbox': {
-    format: 'cjs',
-    defaultExtension: 'js',
-    main: 'checkbox.js'
-  },
-  '@angular2-material/radio': {
-    format: 'cjs',
-    defaultExtension: 'js',
-    main: 'radio.js'
-  },
-  '@angular2-material/progress-circle': {
-    format: 'cjs',
-    defaultExtension: 'js',
-    main: 'progress-circle.js'
-  },
-  '@angular2-material/progress-bar': {
-    format: 'cjs',
-    defaultExtension: 'js',
-    main: 'progress-bar.js'
-  },
-  '@angular2-material/input': {
-    format: 'cjs',
-    defaultExtension: 'js',
-    main: 'input.js'
-  },
-  '@angular2-material/list': {
-    format: 'cjs',
-    defaultExtension: 'js',
-    main: 'list.js'
-  },
-  '@angular2-material/icon': {
-    format: 'cjs',
-    defaultExtension: 'js',
-    main: 'icon.js'
-  },
-  '@angular2-material/tabs': {
-    format: 'cjs',
-    defaultExtension: 'js',
-    main: 'tabs.js'
-  },
-};
+    main: `${name}.js`,
+  };
+});
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************************
