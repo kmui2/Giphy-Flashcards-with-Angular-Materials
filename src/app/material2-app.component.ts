@@ -18,8 +18,8 @@ export class Material2AppAppComponent {
 
   constructor() {
     // Update the value for the progress-bar on an interval.
-    // setInterval(() => {
-    //   this.progress = (this.progress + Math.floor(Math.random() * 4) + 1) % 100;
-    // }, 200);
+    setInterval(() => {
+      this.progress = (this.progress + Math.floor(Math.random() * 4) + 1) % 100;
+    }, 200);
   }
 }
