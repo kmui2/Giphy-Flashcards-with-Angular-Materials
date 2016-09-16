@@ -1,4 +1,5 @@
-<md-sidenav-layout>
+<md-sidenav-layout [class.m2app-dark]="isDarkTheme">
+
   <md-sidenav #sidenav mode="side" class="app-sidenav">
     Sidenav
   </md-sidenav>
@@ -11,6 +12,7 @@
     Angular Material2 Example App
 
     <span class="app-toolbar-filler"></span>
+    <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
   </md-toolbar>
 
   <div class="app-content">
@@ -117,6 +119,18 @@
     <md-card>
       <md-icon>build</md-icon>
     </md-card>
+
+    <md-card>
+      <button md-button [md-menu-trigger-for]="menu">
+        MENU
+      </button>
+    </md-card>
+
+    <md-menu #menu="mdMenu">
+      <button md-menu-item>Lemon</button>
+      <button md-menu-item>Lime</button>
+      <button md-menu-item>Banana</button>
+    </md-menu>
 
   </div>
 

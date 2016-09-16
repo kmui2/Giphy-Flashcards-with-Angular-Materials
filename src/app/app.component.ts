@@ -2,12 +2,13 @@ import {Component} from '@angular/core';
 
 
 @Component({
-  moduleId: module.id,
   selector: 'material2-app-app',
-  templateUrl: 'material2-app.component.html',
-  styleUrls: ['material2-app.component.css'],
+  templateUrl: 'app.component.html',
+  styleUrls: ['app.component.css'],
 })
 export class Material2AppAppComponent {
+  isDarkTheme: boolean = false;
+
   foods: any[] = [
     {name: 'Pizza', rating: 'Excellent'},
     {name: 'Burritos', rating: 'Great'},

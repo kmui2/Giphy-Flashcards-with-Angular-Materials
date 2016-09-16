@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 set -ex
 
-for package in ~/material2/deploy/* ; do
-  if [ -f ${package}/package.json ]; then
-    npm install ${package}
-  fi
-done
+rm -rf ./node_modules/@angular2-material
+cp -r ~/material2/dist/@angular2-material/ ./node_modules

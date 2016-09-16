@@ -2,40 +2,15 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Material2App</title>
+  <title>M2App</title>
   <base href="/">
-  {{content-for 'head'}}
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="vendor/@angular2-material/core/overlay/overlay.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-  <!-- Service worker support is disabled by default.
-       Install the worker script and uncomment to enable.
-       Only enable service workers in production.
-  <script type="text/javascript">
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/worker.js').catch(function(err) {
-        console.log('Error installing service worker: ', err);
-      });
-    }
-  </script>
-  -->
 </head>
 <body>
   <material2-app-app>Loading...</material2-app-app>
-
-  <script src="vendor/core-js/client/core.js"></script>
-  <script src="vendor/reflect-metadata/Reflect.js"></script>
-  <script src="vendor/systemjs/dist/system-polyfills.js"></script>
-  <script src="vendor/systemjs/dist/system.src.js"></script>
-  <script src="vendor/zone.js/dist/zone.js"></script>
-
-  <script>
-    System.import('system-config.js').then(function () {
-      System.import('main');
-    }).catch(console.error.bind(console));
-  </script>
 </body>
 </html>
