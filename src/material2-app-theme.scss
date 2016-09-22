@@ -46,7 +46,7 @@
  @include md-tooltip-theme($theme);
 }
 
-$primary: md-palette($md-green);
+$primary: md-palette($md-deep-purple);
 $accent:  md-palette($md-amber, A200, A100, A400);
 $warn:    md-palette($md-red);
 
@@ -55,8 +55,8 @@ $theme: md-light-theme($primary, $accent, $warn);
 @include m2-app-components($theme);
 
 .m2app-dark {
-  $dark-primary: md-palette($md-blue-grey);
-  $dark-accent:  md-palette($md-amber, A200, A100, A400);
+  $dark-primary: md-palette($md-pink, 700, 500, 900);
+  $dark-accent:  md-palette($md-blue-grey, A200, A100, A400);
   $dark-warn:    md-palette($md-deep-orange);
 
   $dark-theme: md-dark-theme($dark-primary, $dark-accent, $dark-warn);
