@@ -14,5 +14,9 @@
       "../node_modules/@types"
     ],
     "types": ["hammerjs"]
-  }
+  },
+  "angularCompilerOptions": {
+   "genDir": "aot",
+   "skipMetadataEmit" : true
+ }
 }

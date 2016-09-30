@@ -8,6 +8,9 @@
 /node_modules
 /bower_components
 
+# generated code
+aot/
+
 # IDEs and editors
 /.idea
 
