@@ -1,18 +1,19 @@
-<md-sidenav-layout [class.m2app-dark]="isDarkTheme">
+<div [class.app-dark-theme]="isDarkTheme">
+<md-sidenav-container >
 
-  <md-sidenav #sidenav mode="side" class="app-sidenav">
+ <md-sidenav #sidenav mode="side" class="app-sidenav">
     Sidenav
   </md-sidenav>
 
   <md-toolbar color="primary">
-    <button class="app-icon-button" (click)="sidenav.toggle()">
-      <i class="material-icons app-toolbar-menu">menu</i>
-    </button>
-
+    <button md-button (click)="sidenav.toggle()">
+      <md-icon>menu</md-icon>
+    </button> 
+    
     Angular Material2 Example App
 
     <span class="app-toolbar-filler"></span>
-    <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
+    <button md-button (click)="toggleTheme()">TOGGLE THEME</button>
   </md-toolbar>
 
   <div class="app-content">
@@ -38,33 +39,38 @@
     </md-card>
 
     <md-card class="app-input-section">
-      <md-input placeholder="First name"></md-input>
+      <md-input-container>
+        <input mdInput placeholder="First name">
+      </md-input-container>
 
-      <md-input #nickname placeholder="Nickname" maxlength="50">
+      <md-input-container>
+        <input mdInput #nickname placeholder="Nickname" maxlength="50">
         <md-hint align="end">
-          {{nickname.characterCount}} / 50
+          {{nickname.value.length }} / 50
         </md-hint>
-      </md-input>
+      </md-input-container>
 
-      <md-input>
+      <md-input-container>
         <md-placeholder>
-          <i class="material-icons app-input-icon">android</i> Favorite phone
+          <md-icon>android</md-icon> Favorite phone
         </md-placeholder>
-      </md-input>
+        <input mdInput>
+      </md-input-container>
 
-      <md-input placeholder="Motorcycle model">
+      <md-input-container>
+        <input mdInput placeholder="Motorcycle model">
         <span md-prefix>
-          <i class="material-icons app-input-icon">motorcycle</i>
+          <md-icon>motorcycle</md-icon>
           &nbsp;
         </span>
-      </md-input>
+      </md-input-container>
     </md-card>
 
     <md-card>
       <md-list class="app-list">
         <md-list-item *ngFor="let food of foods">
           <h3 md-line>{{food.name}}</h3>
-          <p md-line class="demo-secondary-text">{{food.rating}}</p>
+          <p md-line >{{food.rating}}</p>
         </md-list-item>
       </md-list>
     </md-card>
@@ -124,13 +130,14 @@
     <md-card>
       <p>Last dialog result: {{lastDialogResult}}</p>
       <button md-raised-button (click)="openDialog()">DIALOG</button>
-      <button md-raised-button (click)="showSnackbar()">SNACKBAR</button>
+      <button md-raised-button (click)="openSnackBar()">SNACKBAR</button>
     </md-card>
 
   </div>
 
-</md-sidenav-layout>
+</md-sidenav-container>
 
-<span class="app-action" [class.m2app-dark]="isDarkTheme">
-  <button md-fab><md-icon>check circle</md-icon></button>
+<span class="app-action">
+  <button md-fab> <md-icon>check circle</md-icon> </button>
 </span>
+</div>

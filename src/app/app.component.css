@@ -1,5 +1,10 @@
-md-sidenav-layout.m2app-dark {
-  background: black;
+.app-sidenav {
+  padding: 10px;
+  min-width: 200px;
+}
+
+.app-toolbar-filler {
+  flex: 1 1 auto;
 }
 
 .app-content {
@@ -10,56 +15,20 @@ md-sidenav-layout.m2app-dark {
   margin: 20px;
 }
 
-.app-sidenav {
-  padding: 10px;
-  min-width: 100px;
+.app-content button {
+  margin: 10px;
 }
 
 .app-content md-checkbox {
   margin: 10px;
 }
 
-.app-toolbar-filler {
-  flex: 1 1 auto;
+.app-content md-radio-button {
+  margin: 10px;
 }
 
-.app-toolbar-menu {
-  padding: 0 14px 0 14px;
-  color: white;
-}
-
-.app-icon-button {
-  box-shadow: none;
-  user-select: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  filter: none;
-  font-weight: normal;
-  height: auto;
-  line-height: inherit;
-  margin: 0;
-  min-width: 0;
-  padding: 0;
-  text-align: left;
-  text-decoration: none;
-}
-
-.app-action {
-  display: inline-block;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
-
-.app-spinner {
-  height: 30px;
-  width: 30px;
-  display: inline-block;
-}
-
-.app-input-icon {
-  font-size: 16px;
+.app-input-section {
+  margin: 20px;
 }
 
 .app-list {
@@ -68,6 +37,19 @@ md-sidenav-layout.m2app-dark {
   margin: 20px;
 }
 
+.app-spinner {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+}
+
 .app-progress {
   margin: 20px;
+}
+
+.app-action {
+  display: inline-block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
