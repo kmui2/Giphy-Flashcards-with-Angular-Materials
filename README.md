@@ -22,4 +22,5 @@ ng s
 - some code cleaning (e.g.`<md-icon>` use, css file sorted, ...) 
 
 #### ToDo
-- replace deprecated import of MaterialModule  (-> split to seperate import for each componet) 
+- replace deprecated import of MaterialModule  (-> split to seperate import for each componet)
+- create my own branch 
