@@ -1,1 +1,26 @@
-<app-demo></app-demo>
+<!-- <app-demo></app-demo> -->
+<div [class.app-dark-theme]="isDarkTheme">
+<md-sidenav-container >
+
+ <md-sidenav #sidenav mode="side" class="app-sidenav">
+    Sidenav
+  </md-sidenav>
+
+  <md-toolbar color="primary">
+    <button md-button (click)="sidenav.toggle()">
+      <md-icon>menu</md-icon>
+    </button> 
+    
+    Angular Material2 Example App
+
+    <span class="app-toolbar-filler"></span>
+    <button md-button (click)="toggleTheme()">TOGGLE THEME</button>
+  </md-toolbar>
+
+  <div class="app-content">
+    <md-card>Hello World</md-card>
+  </div>
+
+</md-sidenav-container>
+
+</div>
