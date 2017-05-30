@@ -1,0 +1,21 @@
+<div class="tp-wrapper">
+
+  <div style="padding: 0" class="row tp-box col-md-3 col-sm-3 col-lg-2 col-xs-2" (click)="toggleFlip()" [@flipState]="flip">
+    <div class="tp-box__side tp-box__front">
+      <div class="fix" *ngIf="selectedGif">
+        <img class="thumbnail" style="width:100%; height:100%" src="{{selectedGif.images.original.url}}" />
+      </div>
+        <button class="btn btn-primary btn-xs btn-default post-content caption text-left">
+          {{flashcard.word}}
+        </button>
+    </div>
+    <div class="tp-box__side tp-box__back">
+      <div class="" *ngIf="flashcard.selectedGif">
+        <img class="thumbnail" style="width:100%" src="{{selectedGif.images.original.url}}" />
+      </div>
+        <button class="btn btn-lg btn-success btn-default post-content caption text-left">
+          {{flashcard.translation}}
+        </button>
+    </div>
+  </div>
+</div>
