@@ -21,6 +21,7 @@
 }
 .tp-box__front {
   /*background: #f30d36;*/
+  transform: rotateY(0deg);
 }
 .tp-box__back {
   /*background: #23262d;*/
