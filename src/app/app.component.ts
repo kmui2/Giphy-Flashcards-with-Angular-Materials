@@ -17,7 +17,9 @@ export class AppComponent implements OnInit {
 
   constructor(
     private db: AngularFireDatabase,
-    private http: Http
+    private http: Http,
+    private _dialog: MdDialog, 
+    private _snackBar: MdSnackBar, 
   ) {
   }
 
@@ -25,5 +27,5 @@ export class AppComponent implements OnInit {
     this.flashcards = this.db.list('/flashcards');
   }
 
-
+  
 }

@@ -13,6 +13,7 @@ import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { DemoComponent, DemoDialogContent } from './components/demo/demo.component';
 import { FlashcardComponent } from './components/flashcard/flashcard.component';
+import { AddFlashcardComponent, AddFlashcardDialogContent } from './components/add-flashcard/add-flashcard.component';
 
 export const environment = {
   production: false,
@@ -32,7 +33,9 @@ export const environment = {
     AppComponent,
     DemoDialogContent,
     DemoComponent,
-    FlashcardComponent
+    FlashcardComponent,
+    AddFlashcardComponent,
+    AddFlashcardDialogContent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,7 @@ export const environment = {
     AngularFireDatabaseModule, // imports firebase/database, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
   ],
-  entryComponents: [DemoDialogContent],
+  entryComponents: [DemoDialogContent, AddFlashcardDialogContent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

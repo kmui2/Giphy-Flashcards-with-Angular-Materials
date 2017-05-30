@@ -1,44 +1,43 @@
 <!-- <app-demo></app-demo> -->
-<div [class.app-dark-theme]="isDarkTheme">
-  <md-sidenav-container >
+<md-sidenav-container >
 
-    <md-sidenav #sidenav mode="side" class="app-sidenav">
-      Sidenav
-    </md-sidenav>
+  <md-sidenav #sidenav mode="side" class="app-sidenav">
+    Sidenav
+  </md-sidenav>
 
-    <md-toolbar color="primary">
-      <button md-button (click)="sidenav.toggle()">
-        <md-icon>menu</md-icon>
-      </button>
+  <md-toolbar color="primary">
+    <button md-button (click)="sidenav.toggle()">
+      <md-icon>menu</md-icon>
+    </button>
 
-      Angular Material2 Example App
+    Angular Material2 App
 
-      <span class="app-toolbar-filler"></span>
-      <button md-button (click)="toggleTheme()">TOGGLE THEME</button>
-    </md-toolbar>
+    <span class="app-toolbar-filler"></span>
+  </md-toolbar>
+  <app-add-flashcard></app-add-flashcard>
+  
+  <div class="app-content">
+    
+    <md-card>
+      <md-tab-group>
 
-    <div class="app-content">
+        <md-tab label="View Cards">
+          <div *ngFor="let flashcard of flashcards | async">
+            <app-flashcard [flashcard]="flashcard"></app-flashcard>
+          </div>
+        </md-tab>
+        
+        
 
-      <md-card>
-        <md-tab-group>
-          <md-tab label="Earth">
-            
-              <div *ngFor="let flashcard of flashcards | async">
-                    <!-- {{flashcard.word}}
-                    {{flashcard.translation}} -->
-                    <app-flashcard [flashcard]="flashcard"></app-flashcard>
-              </div>
-              
-          </md-tab>
-          <md-tab label="Fire">
-            <p>FIRE</p>
-          </md-tab>
-        </md-tab-group>
-      </md-card>
+        <md-tab label="Add a Card">
+          <p>Add Card</p>
+        </md-tab>
 
-    </div>
+      </md-tab-group>
+    </md-card>
 
-  </md-sidenav-container>
+  </div>
 
-</div>
-<!-- <app-demo></app-demo> -->
+</md-sidenav-container>
+
+<app-demo></app-demo>
