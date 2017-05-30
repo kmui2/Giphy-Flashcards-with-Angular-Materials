@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Add New Flashcard Form</h1>
+  <p>word:{{word}} translation:{{translation}}</p>
+  
+  <form>
+    
+    <div class="form-group">
+      <label for="word">Word</label>
+      <input type="text" class="form-control" id="word" [(ngModel)]="word" name="word">
+    </div>
+    
+    <div class="form-group">
+      <label for="translation">Translation</label>
+      <input type="text" class="form-control" id="translation" required [(ngModel)]="translation" name="translation">
+    </div>
+    <button md-raised-button type="submit" (click)="dialogRef.close({word:word,translation:translation})" class="btn btn-success">Submit</button>
+  </form>
+  
+</div>
