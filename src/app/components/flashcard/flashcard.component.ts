@@ -45,7 +45,7 @@ export class FlashcardComponent implements OnInit {
   }
 
   performTranslationSearch(): void {
-    var apiLink = 'http://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=' + this.flashcard.translation;
+    var apiLink = 'https://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=' + this.flashcard.translation;
     this.http.request(apiLink)
       .subscribe((res: Response) => {
         this.giphies = res.json().data;

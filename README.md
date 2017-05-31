@@ -1,4 +1,10 @@
-# material2-sample
+# Giphy Flashcards
+https://proplistings-5dcf0.firebaseapp.com/ 
+
+
+# Code Credits:
+
+## material2-sample
 Simple sample app that consumes Angular Material 2 components. Built with the `angular-cli`.
 
 NOTE: This is an updated version of the original:
