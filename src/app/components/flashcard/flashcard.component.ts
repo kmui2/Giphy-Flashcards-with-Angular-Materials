@@ -37,12 +37,6 @@ export class FlashcardComponent implements OnInit {
     private giphyService: GiphyService
   ) { 
   } 
-  
-  // goToFlashcard(id: string): void {
-  //   this.router.navigate(['./', id], {relativeTo: this.route});
-  // }
-
-
   toggleFlip() {
     this.flip = (this.flip == 'inactive') ? 'active' : 'inactive';
   }

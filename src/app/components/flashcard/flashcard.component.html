@@ -5,7 +5,7 @@
       <div class="fix" *ngIf="selectedGif">
         <img class="thumbnail img-responsive" style="" src="{{flashcard.gifUrl}}" />
       </div>
-        <button [routerLink]="['/flashcard/'+flashcard.$key]" (click)="goToFlashcard" class="btn btn-primary btn-xs btn-default post-content caption text-left">
+        <button [routerLink]="['/flashcard/'+flashcard.$key]" class="btn btn-primary btn-xs btn-default post-content caption text-left">
           {{flashcard.word}}
         </button>
     </div>

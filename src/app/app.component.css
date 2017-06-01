@@ -3,6 +3,10 @@
   min-width: 200px;
   height: 100%; 
 }
+
+.app-content {
+  padding: 20px;
+}
 /*.example-sidenav-fab-container {
   width: 500px;
   height: 300px;

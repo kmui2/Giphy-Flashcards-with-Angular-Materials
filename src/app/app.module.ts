@@ -6,7 +6,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { RouterModule, Routes } from '@angular/router';
-import { AddFlashcardModule } from './components/add-flashcard/add-flashcard.module';
+// import { AddFlashcardModule } from './components/add-flashcard/add-flashcard.module';
  
 import 'hammerjs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,6 +19,7 @@ import { FlashcardComponent } from './components/flashcard/flashcard.component';
 import { AddFlashcardComponent, AddFlashcardDialogContent } from './components/add-flashcard/add-flashcard.component';
 import { FlashcardDetailComponent } from './components/flashcard-detail/flashcard-detail.component';
 import { GiphyService } from './services/giphy/giphy.service'
+import { EditFlashcardComponent } from './components/edit-flashcard/edit-flashcard.component';
 export const environment = {
   production: false,
   firebase: {
@@ -32,10 +33,10 @@ export const environment = {
 };
 const routes: Routes = [
   // basic routes
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' }, 
   { path: 'home', component: HomeComponent },
   { path: 'add-flashcard', component: AddFlashcardDialogContent } ,
-  { path: 'flashcard/:id', component: FlashcardDetailComponent }
+  { path: 'flashcard/:id', component: EditFlashcardComponent  }
 ];
 
 
@@ -48,7 +49,8 @@ const routes: Routes = [
     AddFlashcardComponent,
     AddFlashcardDialogContent,
     HomeComponent,
-    FlashcardDetailComponent
+    FlashcardDetailComponent,
+    EditFlashcardComponent
   ], 
   imports: [
     BrowserModule,
