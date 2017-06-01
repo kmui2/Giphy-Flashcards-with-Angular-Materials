@@ -1,11 +1,21 @@
+.example-card {
+  width: 200px;
+  /*padding: 100px;  */
+}
+
+.example-header-image {
+  background-image: './shiba2.jpg';
+  background-size: cover;
+}
+
 .tp-wrapper {
   perspective: 800px;
 }
-img {
+/*img {
   
     max-height: 150px;
     width: 100%;
-}
+}*/
 .tp-box {
   position: relative;
   width: 200px;

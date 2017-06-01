@@ -1,0 +1,16 @@
+<app-add-flashcard></app-add-flashcard> 
+<md-slide-toggle>Detailed</md-slide-toggle>
+<!-- <div class="app-content"> -->
+  <!-- <md-card> -->
+    <!-- <md-tab-group>
+      <md-tab label="View Cards"> -->
+        <div *ngFor="let flashcard of flashcards | async">
+          <app-flashcard [flashcard]="flashcard"></app-flashcard>
+        </div>
+      <!-- </md-tab>
+      <md-tab label="Add a Card">
+        <p>Add Card</p>
+      </md-tab>
+    </md-tab-group>
+  </md-card> -->
+<!-- </div> --> 

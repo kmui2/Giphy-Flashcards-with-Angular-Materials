@@ -3,19 +3,35 @@
   <div style="padding: 0" class="tp-box col-md-3 col-sm-3 col-lg-2 col-xs-2" (click)="toggleFlip()" [@flipState]="flip">
     <div class="tp-box__side tp-box__front">
       <div class="fix" *ngIf="selectedGif">
-        <img class="thumbnail img-responsive" style="" src="{{selectedGif.images.original.url}}" />
+        <img class="thumbnail img-responsive" style="" src="{{flashcard.gifUrl}}" />
       </div>
-        <button class="btn btn-primary btn-xs btn-default post-content caption text-left">
+        <button [routerLink]="['/flashcard/'+flashcard.$key]" (click)="goToFlashcard" class="btn btn-primary btn-xs btn-default post-content caption text-left">
           {{flashcard.word}}
         </button>
     </div>
     <div class="tp-box__side tp-box__back">
       <div class="fix" *ngIf="selectedGif">
-        <img class="img-responsive thumbnail" style="" src="{{selectedGif.images.original.url}}" />
+        <img class="img-responsive thumbnail" style="" src="{{flashcard.gifUrl}}" />
       </div>
-        <button class="btn btn-lg btn-success btn-default post-content caption text-left">
+        <button [routerLink]="['/flashcard/'+flashcard.$key]" class="btn btn-lg btn-success btn-default post-content caption text-left">
           {{flashcard.translation}}
         </button>
     </div>
   </div>
 </div>
+<!-- <div class="tp-box col-md-3 col-sm-3 col-lg-2 col-xs-2">
+<md-card class="example-card">
+  <md-card-header>
+    <div md-card-avatar class="example-header-image"></div>
+    <md-card-title>{{flashcard.word}}</md-card-title>
+    <md-card-subtitle></md-card-subtitle>
+  </md-card-header>
+  <img md-card-image src="{{flashcard.gifUrl}}"> 
+  <md-card-content>
+  </md-card-content>
+  <md-card-actions>
+    <button md-button>LIKE</button>
+    <button md-button></button>
+  </md-card-actions>
+</md-card>
+</div> -->

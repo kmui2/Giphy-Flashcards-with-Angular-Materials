@@ -1,53 +1,22 @@
 <!-- <app-demo></app-demo> -->
-<md-sidenav-container >
+<!-- <md-sidenav-container > -->
 
-  <md-sidenav #sidenav mode="side" class="app-sidenav">
+  <!-- <md-sidenav #sidenav mode="side" class="example-sidenav-fab-container app-sidenav">
     Sidenav
-  </md-sidenav>
+  </md-sidenav> -->
 
   <md-toolbar color="primary">
-    <button md-button (click)="sidenav.toggle()">
+    <!-- <button md-button (click)="sidenav.toggle()">
       <md-icon>menu</md-icon>
-    </button>
+    </button> -->
 
     Angular Material2 App
 
     <span class="app-toolbar-filler"></span>
   </md-toolbar>
-  <app-add-flashcard></app-add-flashcard>
   
-  <div class="app-content">
-    
-    <md-card>
-      <md-tab-group>
 
-        <md-tab label="View Cards">
-          <div *ngFor="let flashcard of flashcards | async">
-            <app-flashcard [flashcard]="flashcard"></app-flashcard>
-          </div>
-        </md-tab>
-        
-        
-
-        <md-tab label="Add a Card">
-          <p>Add Card</p>
-        </md-tab>
-
-      </md-tab-group>
-    </md-card>
-    
-    <!-- <div class="row">
-      <div class="col-sm6 col-md-4" *ngFor="let flashcard of flashcars | async">
-        <div class="thumbnail">
-          <div class="content">
-            <img src="{{ flashcard.}}"
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-  </div>
-
-</md-sidenav-container>
+<!-- </md-sidenav-container> --> 
+<router-outlet></router-outlet> 
 
 <!-- <app-demo></app-demo> -->

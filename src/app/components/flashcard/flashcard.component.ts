@@ -2,10 +2,11 @@ import { Component, OnInit, Input, trigger, state, style, transition, animate } 
 
 import { MdDialog, MdDialogRef, MdSnackBar } from '@angular/material';
 import { OverlayContainer } from '@angular/material';
-import { Http, Response } from '@angular/http';
+import { Response } from '@angular/http';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-
+import { GiphyService } from '../../services/giphy/giphy.service';
 @Component({
   selector: 'app-flashcard',
   templateUrl: 'flashcard.component.html',
@@ -31,9 +32,15 @@ export class FlashcardComponent implements OnInit {
   selectedGif: any;
   constructor(
     private db: AngularFireDatabase,
-    private http: Http
-  ) {
-  }
+    private route: ActivatedRoute,
+    private router: Router,
+    private giphyService: GiphyService
+  ) { 
+  } 
+  
+  // goToFlashcard(id: string): void {
+  //   this.router.navigate(['./', id], {relativeTo: this.route});
+  // }
 
 
   toggleFlip() {
@@ -41,18 +48,12 @@ export class FlashcardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.performTranslationSearch();
-  }
-
-  performTranslationSearch(): void {
-    var apiLink = 'https://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=' + this.flashcard.translation;
-    this.http.request(apiLink)
+    // this.performTranslationSearch();
+    this.giphyService.performTranslationSearch(this.flashcard)
       .subscribe((res: Response) => {
-        this.giphies = res.json().data;
-        console.log(this.giphies);
-        this.selectedGif = this.giphies[Math.floor(Math.random() * this.giphies.length)];
-        console.log("This is selected: " + this.selectedGif);
-        return this.selectedGif.images.original.url;
+        var giphies = res.json().data; 
+        this.selectedGif = giphies[Math.floor(Math.random() * giphies.length)];
+        
       });
   }
 }

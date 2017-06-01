@@ -1,11 +1,4 @@
-import { Component, Optional, OnInit } from '@angular/core';
-
-import { MdDialog, MdDialogRef, MdSnackBar } from '@angular/material';
-import { OverlayContainer } from '@angular/material';
-import { Http, Response } from '@angular/http';
-
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-
+import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,18 +6,11 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 })
 export class AppComponent implements OnInit {
 
-  flashcards: FirebaseListObservable<any[]>;
 
-  constructor(
-    private db: AngularFireDatabase,
-    private http: Http,
-    private _dialog: MdDialog, 
-    private _snackBar: MdSnackBar, 
-  ) {
+  constructor() {
   }
 
   ngOnInit() {
-    this.flashcards = this.db.list('/flashcards');
   }
 
   
