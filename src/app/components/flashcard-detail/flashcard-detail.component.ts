@@ -6,7 +6,7 @@ import { Response } from '@angular/http';
 import { Router, ActivatedRoute } from '@angular/router';
 
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-import { GiphyService } from '../../services/giphy/giphy.service'; 
+import { GiphyService } from '../../services/giphy/giphy.service';
 @Component({
   selector: 'app-flashcard-detail',
   templateUrl: 'flashcard-detail.component.html',
@@ -21,7 +21,7 @@ export class FlashcardDetailComponent implements OnInit {
     private db: AngularFireDatabase,
     private route: ActivatedRoute,
     private router: Router,
-    private giphyService: GiphyService
+    private giphyService: GiphyService,
   ) { 
   } 
 

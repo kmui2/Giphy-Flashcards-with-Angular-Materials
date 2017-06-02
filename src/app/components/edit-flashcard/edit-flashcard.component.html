@@ -1,20 +1,27 @@
-<button md-button [routerLink]="'/home/'">Go Home</button> 
-<md-card class="example-card">
-  <md-card-header>
-    <div md-card-avatar class="example-header-image"></div>
-    <md-card-title>Shiba Inu</md-card-title>
-    <md-card-subtitle>Dog Breed</md-card-subtitle>
-  </md-card-header>
-  <img md-card-image *ngIf="flashcard" src="{{flashcard.gifUrl}}"> 
-  <md-card-content>
-    <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
-    </p>
-  </md-card-content>
-  <md-card-actions>
-    <button md-button>LIKE</button>
-    <button md-button>SHARE</button>
-  </md-card-actions>
-</md-card>
+<button md-button [routerLink]="'/home/'">Go Home</button>
+<div *ngIf="flashcard">
+  <md-card class="example-card">
+    <md-card-header>
+      <!-- <div md-card-avatar class="example-header-image"></div> -->
+      <!-- <md-card-title *ngIf="flashcard">{{flashcard.word}}</md-card-title>
+      <md-card-subtitle *ngIf="flashcard">{{flashcard.translation}}</md-card-subtitle> -->
+      <form> 
+          <table class="example-full-width" cellspacing="0"><tr>
+           <td><md-input-container class="example-full-width">
+             <strong><input mdInput placeholder="Word" value="{{flashcard.word}}" name="flashcard.word" [(ngModel)]="flashcard.word" /></strong>
+           </md-input-container></td>
+           <td><md-input-container class="example-full-width">
+             <input mdInput placeholder="Translation" value="{{flashcard.translation}}" name="flashcard.translation" [(ngModel)]="flashcard.translation" /> 
+           </md-input-container></td>
+         </tr></table>
+      </form>
+    </md-card-header>
+    <img md-card-image *ngIf="flashcard" src="{{flashcard.gifUrl}}"> 
+    <md-card-content>
+    </md-card-content>
+    <md-card-actions>
+      <button md-button (click)="editFlashcard()" [routerLink]="'/home/'">SAVE</button>
+      <button md-button (click)="deleteFlashcard()" [routerLink]="'/home/'">DELETE</button>
+    </md-card-actions>
+  </md-card> 
+</div>

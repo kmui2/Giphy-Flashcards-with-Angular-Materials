@@ -6,8 +6,6 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { RouterModule, Routes } from '@angular/router';
-// import { AddFlashcardModule } from './components/add-flashcard/add-flashcard.module';
- 
 import 'hammerjs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '@angular/material';
@@ -20,6 +18,8 @@ import { AddFlashcardComponent, AddFlashcardDialogContent } from './components/a
 import { FlashcardDetailComponent } from './components/flashcard-detail/flashcard-detail.component';
 import { GiphyService } from './services/giphy/giphy.service'
 import { EditFlashcardComponent } from './components/edit-flashcard/edit-flashcard.component';
+import { FirebaseFlashcardService } from './services/firebase-flashcard/firebase-flashcard.service';
+  
 export const environment = {
   production: false,
   firebase: {
@@ -31,12 +31,13 @@ export const environment = {
     messagingSenderId: "1078585714037"
   }
 };
+
 const routes: Routes = [
   // basic routes
-  { path: '', redirectTo: 'home', pathMatch: 'full' }, 
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'add-flashcard', component: AddFlashcardDialogContent } ,
-  { path: 'flashcard/:id', component: EditFlashcardComponent  }
+  { path: 'add-flashcard', component: AddFlashcardDialogContent },
+  { path: 'flashcard/:id', component: EditFlashcardComponent }
 ];
 
 
@@ -50,8 +51,9 @@ const routes: Routes = [
     AddFlashcardDialogContent,
     HomeComponent,
     FlashcardDetailComponent,
-    EditFlashcardComponent
-  ], 
+    EditFlashcardComponent,
+
+  ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -66,7 +68,10 @@ const routes: Routes = [
   entryComponents: [DemoDialogContent, AddFlashcardDialogContent],
   bootstrap: [AppComponent],
   providers: [
-    GiphyService
+    GiphyService,
+    FirebaseFlashcardService
   ]
 })
+
 export class AppModule { }
+
