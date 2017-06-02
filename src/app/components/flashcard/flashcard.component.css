@@ -11,11 +11,11 @@
 .tp-wrapper {
   perspective: 800px;
 }
-/*img {
+img {
   
     max-height: 150px;
     width: 100%;
-}*/
+}
 .tp-box {
   position: relative;
   width: 200px;
